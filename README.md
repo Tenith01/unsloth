@@ -94,6 +94,7 @@ Use our [Docker image](https://hub.docker.com/r/unsloth/unsloth) ```unsloth/unsl
 docker run -d -e JUPYTER_PASSWORD="mypassword" \
   -p 8888:8888 -p 8000:8000 -p 2222:22 \
   -v $(pwd)/work:/workspace/work \
+  -v ~/.cache:/workspace/.cache \
   --gpus all \
   unsloth/unsloth
   ```
